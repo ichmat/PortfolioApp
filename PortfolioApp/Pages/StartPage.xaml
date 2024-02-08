@@ -2,11 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PortfolioApp.Pages.StartPage"
-             Title="StartPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="StartPage"
+             Loaded="ContentPage_Loaded">
+    <Border>
+        <ActivityIndicator
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            x:Name="activity"
+            IsVisible="True"
+            />
+    </Border>
 </ContentPage>

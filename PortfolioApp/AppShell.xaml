@@ -14,5 +14,17 @@
         />
 
     <TabBar>
+        <Tab Title="API Status">
+            <ShellContent
+                Route="StatusPage"
+                ContentTemplate="{DataTemplate page:StatusPage}"
+                Shell.TabBarIsVisible="True" />
+        </Tab>
+        <Tab Title="Profile">
+            <ShellContent
+                Route="ProfilePage"
+                ContentTemplate="{DataTemplate page:ProfilePage}"
+                Shell.TabBarIsVisible="True" /> 
+        </Tab>
     </TabBar>
 </Shell>

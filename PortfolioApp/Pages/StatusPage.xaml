@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PortfolioApp.Pages.StatusPage"
+             Title="Page de status"
+             Loaded="ContentPage_Loaded">
+    <Grid>
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" x:Name="VSL">
+            <HorizontalStackLayout Margin="5">
+                <Label>Status API :</Label>
+                <Label x:Name="L_APIStatus" FontAttributes="Bold"></Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Margin="5">
+                <Label>Status BDD :</Label>
+                <Label x:Name="L_BDDStatus" FontAttributes="Bold"></Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Margin="5">
+                <Label>Clé d'api :</Label>
+                <Label x:Name="L_APIKeyStatus" FontAttributes="Bold"></Label>
+            </HorizontalStackLayout>
+
+            <Button x:Name="ButtonRefresh" Clicked="Button_Clicked" HorizontalOptions="Center" HeightRequest="35" WidthRequest="120" Text="Rafraîchir" />
+        </VerticalStackLayout>
+        <ActivityIndicator 
+VerticalOptions="Center" HorizontalOptions="Center"
+x:Name="activity"/>
+    </Grid>
+</ContentPage>

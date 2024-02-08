@@ -22,7 +22,7 @@ namespace PortfolioApp.Tools
             if (_configuration == null)
             {
                 _configuration = new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .SetBasePath(Path.GetDirectoryName(typeof(App).Assembly.Location)!)
                     .AddJsonFile(CONFIG_JSON, optional: false, reloadOnChange: false)
                     .Build();
             }
@@ -32,7 +32,7 @@ namespace PortfolioApp.Tools
         {
             InitIfNull();
             return _configuration![JSKEY_API_URL] ?? 
-                throw new ConfigurationException(JSKEY_API_URL, $"la clé d'api n'est pas configuré dans le fichier {CONFIG_JSON}");
+                throw new ConfigurationException(JSKEY_API_URL, $"l'url de l'api n'est pas configuré dans le fichier {CONFIG_JSON}");
         }
 
         internal static bool TryGetApiKey(out string apiKey)
